@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>El peso de las palabras</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- BACK -->
+<button onclick="window.location.href='../index.html'" class="back-btn">
+  ⬅ Back
+</button>
+
+<!-- UI PANEL -->
+<div id="gui">
+
+  <h1>El peso de las palabras</h1>
+
+  <p class="description">
+    Spoken words become physical.  
+    Letters float, collide, and eventually fall under gravity.  
+    Language is no longer symbolic — it has weight.
+  </p>
+
+  <p class="instructions">
+    Click to activate voice<br>
+    Press SPACE to release gravity
+  </p>
+
+  <div class="controls">
+
+    <label>
+      Size
+      <input type="range" id="sizeSlider" min="16" max="120" value="32">
+    </label>
+
+    <label>
+      Font
+      <select id="fontSelect">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Courier New">Courier</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Times New Roman">Times</option>
+      </select>
+    </label>
+
+    <button id="reloadButton">Reset microphone</button>
+
+  </div>
+
+</div>
+
+<script src="sketch.js"></script>
+
+</body>
+</html>

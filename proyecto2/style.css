@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #111, #000);
+  color: white;
+}
+
+canvas {
+  display:block;
+}
+
+/* UI PANEL */
+#gui {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  max-width: 320px;
+
+  padding: 20px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* TITLE */
+#gui h1 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.description {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+/* CONTROLS */
+.controls label {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+input[type="range"],
+select {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* BUTTONS (ONLY GUI) */
+#gui button {
+  margin-top: 12px;
+  padding: 10px;
+
+  width: 100%;
+
+  background: linear-gradient(135deg, #007bff, #00c6ff);
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+#gui button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0056b3, #0096c7);
+}
+
+/* BACK BUTTON */
+.back-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 15px;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    font-size: 14px;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* MOBILE */
+@media (max-width: 600px) {
+
+  #gui {
+    left: 10px;
+    right: 10px;
+    max-width: none;
+  }
+
+  .back-btn {
+    top: auto;
+    bottom: 20px;
+  }
+
+}
