@@ -1,191 +1,89 @@
 # MySketches
 
-Interactive sketches developed with **p5.js** exploring the relationship between **image, language, and physical behavior**.
+A collection of interactive sketches built with **p5.js**, exploring how digital media can transform multimedia assets into interactive systems.
 
-This repository is designed as a set of **educational examples for ISTEC students**, introducing creative coding through interactive systems, while also engaging with concepts from **media art and affective computing**.
-
----
-
-## 🎯 Overview
-
-The sketches demonstrate how digital elements (images, text, voice) can be transformed into **dynamic, interactive systems**.
-
-Each project explores a different transformation:
-
-* **Image → Particles**
-* **Voice → Text → Physics**
-
-The goal is to understand programming not only as logic, but as a way to design **behavior, interaction, and meaning**.
+🎓 Educational material for ISTEC students
 
 ---
 
-## 🧪 Projects
+## 🌐 Overview
 
-### 1. Circle Matrix (Image → Particles)
+*MySketches* presents simple yet expressive examples of **creative coding**, where inputs such as images or speech are translated into **behavior, motion, and interaction**.
 
-An image is decomposed into a grid of colored circles.
-Each circle represents a sampled pixel and behaves as an independent agent.
+Rather than focusing only on visuals, these works emphasize:
 
-#### ✨ Interaction
-
-* Upload an image
-* Move the mouse to repel particles
-* Adjust:
-
-  * grid resolution (rows & columns)
-  * circle size
-  * interaction radius
-
-#### 🧠 Concept
-
-This sketch explores the idea of an image as a **field of autonomous elements**, rather than a fixed representation.
-
-The original image remains recognizable, but becomes unstable under interaction — revealing its underlying structure.
-
-#### 🛠 Topics covered
-
-* Image processing (pixel sampling)
-* Coordinate mapping
-* Object-oriented programming (classes)
-* Interaction forces (distance-based behavior)
-* Responsive canvas design
+* systems over static representation
+* interaction over passive observation
+* process over final form
 
 ---
 
-### 2. The Weight of Words (Voice → Physics)
+## 🧩 Projects
 
-Speech is captured through the microphone and transformed into floating letters.
-These letters behave as physical objects and can fall under gravity.
+### Circle Matrix
 
-#### ✨ Interaction
+Transforms an image into a grid of interactive particles.
+Each pixel becomes a dynamic element that reacts to the user’s presence.
 
-* Click to activate speech recognition
-* Speak → letters appear
-* Press **SPACE** → letters fall
-* Adjust:
+### The Weight of Words
 
-  * font size
-  * font type
-
-#### 🧠 Concept
-
-Language is transformed from a symbolic system into a **material one**.
-
-Words are no longer only interpreted — they **exist, move, collide, and disappear**.
-
-The piece explores:
-
-* the tension between **ephemeral speech and physical presence**
-* the idea that **meaning can have weight**
-
-#### 🛠 Topics covered
-
-* Speech recognition (Web Speech API)
-* Text rendering in p5.js
-* Physics simulation (gravity, collision)
-* Time-based deletion (memory decay)
-* Real-time interaction
+Captures speech and converts it into letters that behave as physical objects.
+Language becomes something that can move, fall, and disappear.
 
 ---
 
-## 🧑‍🏫 Educational Goals
+## 🎓 Educational Purpose
 
-These sketches are designed to help students:
+These sketches introduce key concepts in **creative coding**, including:
 
-* Understand **interactive systems**
-* Learn **event-driven programming**
-* Work with **real-time input** (mouse, keyboard, microphone)
-* Explore **mapping between data and behavior**
-* Think about code as a **creative and expressive tool**
+* Real-time interaction (mouse, keyboard, voice)
+* Object-oriented programming in JavaScript
+* Generative and interactive design
+
+They are intentionally simple, allowing students to:
+
+* understand the structure
+* modify the code
+* extend the ideas
 
 ---
 
-## 🚀 Getting Started
+## 🛠 Technologies
 
-### 1. Clone the repository
+* **p5.js**
+* **JavaScript (ES6)**
+* **Web APIs (Speech Recognition)**
+* HTML5 / CSS3
+
+---
+
+## 🚀 Usage
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/MySketches.git
 ```
 
-### 2. Open the project
+Open `index.html` in your browser.
 
-You can simply open `index.html` in your browser.
-
-> ⚠️ For speech recognition, it is recommended to run a local server.
-
-Example using Python:
-
-```bash
-python -m http.server
-```
-
-Then open:
-
-```
-http://localhost:8000
-```
+> ⚠️ For microphone-based interaction, it is recommended to run a local server.
 
 ---
 
-## 📁 Structure
+## 🧠 Conceptual Context
 
-```
-MySketches/
-│
-├── index.html
-├── style.css
-├── script.js
-│
-├── proyecto1/
-│   ├── proyecto1.html
-│   ├── sketch.js
-│   └── style.css
-│
-├── proyecto2/
-│   ├── proyecto2.html
-│   ├── sketch.js
-│   └── style.css
-```
+This work is part of a broader exploration of:
 
----
+* Interaction as a form of meaning-making
+* The transformation of **symbolic systems (language)** into **physical behaviors**
+* The relationship between **perception, emotion, and computation**
 
-## 🧩 Technologies
+The sketches can be understood as small prototypes where:
 
-* **p5.js**
-* **JavaScript (ES6)**
-* **Web Speech API**
-* HTML5 / CSS3
-
----
-
-## 🔬 Research Context
-
-These sketches are aligned with ongoing research in:
-
-* **Affective Computing**
-* **Speech Emotion Recognition**
-* **Multimodal Interaction**
-* **Prosodic Expression and Irony**
-
-They explore how **voice, language, and perception** can be translated into **visual and physical systems**.
-
----
-
-## ✨ Future Extensions
-
-Possible directions for development:
-
-* Mapping **voice features (pitch, intensity)** to visual behavior
-* Adding **sound feedback**
-* Exporting animations (video / data)
-* Extending interaction to **multimodal inputs**
-
----
-
-## 📄 License
-
-This project is open for educational use.
+* images become systems
+* words become objects
+* interaction reshapes meaning
 
 ---
 
@@ -194,10 +92,16 @@ This project is open for educational use.
 Jorge Forero
 Artist & Media Researcher
 PhD Researcher – University of Porto
+[www.forero.cl](http://www.forero.cl)
 
 ---
 
-## 💡 Final Note
+## 📄 License
 
-These sketches are not just demonstrations of code —
-they are experiments in thinking about **interaction, perception, and meaning**.
+Open for educational and non-commercial use.
+
+---
+
+## ✨ Note
+
+These sketches are intended not only as technical examples, but as starting points for thinking about how code can be used to create **interactive, expressive, and meaningful systems**.
