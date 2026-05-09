@@ -15,21 +15,21 @@
 <div class="ui-panel">
   <h1>Circle Matrix</h1>
   <p class="description">
-    Transform an image into a dynamic field of particles.  
+    Transform an image into a dynamic field of particles.
     The image dissolves into circles that react to your presence.
   </p>
 
   <div class="controls">
     <input type="file" id="imageLoader" accept="image/*">
 
-    <label>Columns <input type="range" id="cols" min="10" max="200" value="60"></label>
-    <label>Rows <input type="range" id="rows" min="10" max="200" value="60"></label>
-    <label>Circle Size <input type="range" id="radius" min="2" max="20" value="6"></label>
-    <label>Interaction Radius <input type="range" id="mouseSize" min="10" max="200" value="80"></label>
+    <label>Columns: <span id="cols-val">60</span> <input type="range" id="cols" min="10" max="200" value="60"></label>
+    <label>Rows: <span id="rows-val">60</span> <input type="range" id="rows" min="10" max="200" value="60"></label>
+    <label>Circle Size: <span id="radius-val">6</span> <input type="range" id="radius" min="2" max="20" value="6"></label>
+    <label>Interaction Radius: <span id="mouseSize-val">80</span> <input type="range" id="mouseSize" min="10" max="200" value="80"></label>
   </div>
 </div>
 
-<button onclick="window.location.href='../index.html'" class="back-btn">
+<button onclick="window.location.href='../index.html'" class="back-btn" aria-label="Back to home">
   ⬅ Back
 </button>
 
