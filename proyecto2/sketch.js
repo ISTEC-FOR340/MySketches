@@ -26,6 +26,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   sizeSlider.addEventListener("input", () => {
     fontSize = +sizeSlider.value;
+    document.getElementById("size-val").innerText = fontSize;
 
     // keep letters inside bounds after resizing
     for (let l of letters) {

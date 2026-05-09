@@ -110,10 +110,21 @@ input[type="file"] {
   z-index: 100;
 }
 
-.back-btn:hover {
+.back-btn:hover, .back-btn:focus-visible {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
   border-color: var(--accent-color);
+  outline: none;
+}
+
+.back-btn:focus-visible {
+  box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 /* MOBILE */
