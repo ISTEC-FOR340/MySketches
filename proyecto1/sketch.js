@@ -47,20 +47,24 @@ function setup() {
 
   document.getElementById('cols').oninput = e => {
     cols = +e.target.value;
+    document.getElementById('val-cols').innerText = cols;
     processImage();
   };
 
   document.getElementById('rows').oninput = e => {
     rows = +e.target.value;
+    document.getElementById('val-rows').innerText = rows;
     processImage();
   };
 
   document.getElementById('radius').oninput = e => {
     r = +e.target.value;
+    document.getElementById('val-radius').innerText = r;
   };
 
   document.getElementById('mouseSize').oninput = e => {
     mouseSize = +e.target.value;
+    document.getElementById('val-mouseSize').innerText = mouseSize;
   };
 }
 
