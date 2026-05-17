@@ -1,0 +1,3 @@
+## 2024-05-17 - [Accessible Clickable Cards]
+**Learning:** Large interactive cards that act as navigation should use `role="link"` and `tabindex="0"`. To avoid accessibility conflicts, nested interactive elements (like buttons) must be converted to non-interactive elements (like a `div`) and hidden from screen readers (`aria-hidden="true"`). Keyboard support for both `Enter` and `Space` (with `preventDefault` for the latter) provides a more expected "button-like" behavior for cards, even when the role is `link`.
+**Action:** Use `role="link"`, `aria-labelledby`, and `tabindex="0"` on cards, and convert nested buttons to decorative `aria-hidden` elements while handling both `Enter` and `Space` keys in JS.
