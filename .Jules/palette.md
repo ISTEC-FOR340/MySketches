@@ -1,0 +1,3 @@
+## 2026-05-19 - Accessible Interactive Cards
+**Learning:** Large interactive containers like cards should use `role="link"` if they lead to a new page, and must handle both 'Enter' and 'Space' keys. For dark-themed glassmorphism designs, a standard focus outline can be hard to see; a high-contrast `box-shadow` combined with `z-index` ensures the focus ring is never clipped or obscured by neighboring elements.
+**Action:** Always implement `role`, `tabindex`, keyboard listeners with `preventDefault` for Space, and prominent `:focus-visible` styles when converting non-semantic elements into interactive ones.
