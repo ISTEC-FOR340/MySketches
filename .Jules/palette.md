@@ -1,0 +1,3 @@
+## 2025-05-14 - Accessible Interactive Cards
+**Learning:** Large interactive cards that trigger navigation are often implemented as clickable `div`s, which are inaccessible to keyboard and screen reader users. Using `role="link"` with `tabindex="0"` on the container, and converting nested buttons to `aria-hidden="true"` spans, provides a clean and accessible interaction model without redundant focus stops.
+**Action:** Always implement whole-card navigation using `role="link"`, `tabindex="0"`, and handle both `Enter` and `Space` (with `preventDefault`) keys. Ensure visual focus states are high-contrast and not obscured by neighboring elements.
