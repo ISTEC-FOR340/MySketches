@@ -11,6 +11,15 @@ window.onload = function () {
             element.onclick = () => {
                 window.location.href = routes[id];
             };
+
+            element.onkeydown = (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    if (e.key === " ") {
+                        e.preventDefault();
+                    }
+                    window.location.href = routes[id];
+                }
+            };
         }
     });
 };
