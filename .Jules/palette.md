@@ -1,0 +1,3 @@
+## 2024-05-23 - Card-as-Link Accessibility Pattern
+**Learning:** For large interactive containers that trigger navigation, using `role="link"` and `tabindex="0"` on the container while converting internal buttons to decorative elements (`<span>` with `aria-hidden="true"`) avoids "double tab stop" confusion and provides a cleaner screen reader experience compared to nested interactive elements.
+**Action:** When implementing clickable cards, move the interaction to the container level using ARIA roles and keyboard listeners, ensuring high-contrast `:focus-visible` styles are provided for visual feedback.
