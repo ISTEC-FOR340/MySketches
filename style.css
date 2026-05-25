@@ -106,6 +106,13 @@ header p {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+.card:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 4px var(--accent-color);
+    transform: translateY(-8px);
+    z-index: 10;
+}
+
 .card > * {
     position: relative;
     z-index: 1;
