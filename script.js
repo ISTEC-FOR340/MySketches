@@ -8,8 +8,17 @@ window.onload = function () {
         const element = document.getElementById(id);
 
         if (element) {
-            element.onclick = () => {
+            const navigate = () => {
                 window.location.href = routes[id];
+            };
+
+            element.onclick = navigate;
+
+            element.onkeydown = (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    navigate();
+                }
             };
         }
     });
