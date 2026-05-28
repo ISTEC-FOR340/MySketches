@@ -1,0 +1,3 @@
+## 2026-05-28 - Glassmorphism Card Accessibility
+**Learning:** Glassmorphism designs often use `overflow: hidden` to clip background gradients or blurs, but this also clips custom focus indicators (like `box-shadow`) on interactive cards. Additionally, nested interactive elements (like buttons inside a clickable div) create a "button inside button" failure in screen readers.
+**Action:** Use `overflow: visible` on interactive cards and ensure focus indicators use a higher `z-index` to remain visible above neighboring cards. Convert nested interactive elements into decorative spans when the parent container handles the click event.
