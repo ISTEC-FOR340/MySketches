@@ -1,0 +1,3 @@
+## 2025-01-24 - Semantic Cards and Focus Indicators
+**Learning:** Replacing non-semantic interactive `div` elements with `<a>` tags not only improves accessibility but also restores native browser behaviors (like right-click context menus and middle-click for new tabs). For glassmorphism designs where cards are closely packed, using `overflow: visible` on cards and a multi-layered `box-shadow` (with a "spacer" matching the background color) creates a high-contrast focus ring that stands out without being clipped by siblings.
+**Action:** Always prefer semantic HTML tags over JS-driven navigation for primary UI elements.
