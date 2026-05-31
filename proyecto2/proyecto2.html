@@ -15,9 +15,9 @@
 <body>
 
 <!-- BACK -->
-<button onclick="window.location.href='../index.html'" class="back-btn">
+<a href="../index.html" class="back-btn">
   ⬅ Back
-</button>
+</a>
 
 <!-- UI PANEL -->
 <div id="gui">
@@ -38,7 +38,7 @@
   <div class="controls">
 
     <label>
-      Size
+      Size (<span id="sizeValue">32</span>)
       <input type="range" id="sizeSlider" min="16" max="120" value="32">
     </label>
 
