@@ -26,6 +26,25 @@ body {
     line-height: 1.6;
 }
 
+/* SKIP LINK */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: top 0.3s ease;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 0 0 12px 12px;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 /* HEADER */
 header {
     text-align: center;
@@ -79,8 +98,10 @@ header p {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     animation: fadeInUp 0.8s ease-out both;
+    text-decoration: none;
+    color: inherit;
 }
 
 .card:nth-child(2) {
@@ -98,12 +119,19 @@ header p {
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 0;
+    border-radius: 24px;
 }
 
-.card:hover {
+.card:hover, .card:focus-visible {
     transform: translateY(-8px);
     border-color: rgba(56, 189, 248, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.card:focus-visible {
+    box-shadow: 0 0 0 4px var(--accent-color);
+    z-index: 10;
 }
 
 .card > * {
@@ -133,6 +161,8 @@ header p {
 
 /* BIG BUTTON */
 .btn {
+    display: inline-block;
+    text-align: center;
     margin-top: auto;
     padding: 16px 24px;
     font-size: 1rem;
@@ -141,13 +171,12 @@ header p {
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.05);
     color: var(--text-primary);
-    cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover .btn {
+.card:hover .btn, .card:focus-visible .btn {
     background: var(--accent-gradient);
     border-color: transparent;
     box-shadow: 0 8px 16px rgba(56, 189, 248, 0.2);

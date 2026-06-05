@@ -1,0 +1,3 @@
+## 2026-06-05 - Semantic Navigation Over Imperative JavaScript
+**Learning:** Replacing manual `onclick` navigation logic with semantic `<a>` tags for large interactive cards restores native browser functionality (middle-click, right-click menu) and simplifies the accessibility tree. When converting these cards, nested interactive elements like `<button>` must be converted to non-interactive elements like `<span>` with `aria-hidden="true"` to prevent invalid nested interactive content.
+**Action:** Always prefer semantic `<a>` tags for navigation containers. If a container must be interactive, ensure it doesn't contain other interactive elements, or convert them to visual-only markers.
