@@ -26,6 +26,24 @@ body {
     line-height: 1.6;
 }
 
+/* SKIP LINK */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 /* HEADER */
 header {
     text-align: center;
@@ -79,8 +97,11 @@ header p {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to allow focus ring */
     animation: fadeInUp 0.8s ease-out both;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
 }
 
 .card:nth-child(2) {
@@ -98,12 +119,18 @@ header p {
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 0;
+    border-radius: 24px;
 }
 
-.card:hover {
+.card:hover, .card:focus-visible {
     transform: translateY(-8px);
     border-color: rgba(56, 189, 248, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.card:focus-visible {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 4px var(--accent-color);
 }
 
 .card > * {
@@ -147,7 +174,7 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover .btn {
+.card:hover .btn, .card:focus-visible .btn {
     background: var(--accent-gradient);
     border-color: transparent;
     box-shadow: 0 8px 16px rgba(56, 189, 248, 0.2);
