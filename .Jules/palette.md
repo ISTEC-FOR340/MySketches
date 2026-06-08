@@ -1,0 +1,3 @@
+## 2025-05-22 - Semantic Navigation and Focus States
+**Learning:** Transitioning from JavaScript-based navigation to semantic `<a>` tags provides significant accessibility wins (native browser features, screen reader clarity) while simplifying the codebase. Combining this with explicit `:focus-visible` styles and high-contrast rings ensures that interactive elements are as usable for keyboard users as they are for mouse users.
+**Action:** Always prefer semantic HTML for navigation. When using large cards as links, ensure internal interactive elements are hidden or converted to non-interactive spans to avoid nested interactive elements.
