@@ -155,6 +155,7 @@ function keyPressed() {
     for (let l of letters) {
       l.falling = true;
     }
+    return false; // prevent page scrolling
   }
 
 }
