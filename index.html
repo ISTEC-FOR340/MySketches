@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,38 +10,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <h1>Interactive Sketches</h1>
+        <p>Examples of creative coding with p5.js – ISTEC</p>
+    </header>
 
-<header>
-    <h1>Interactive Sketches</h1>
-    <p>Examples of creative coding with p5.js – ISTEC</p>
-</header>
+    <main id="main-content" class="container">
+        <a href="proyecto1/proyecto1.html" class="card" id="btn-p1" aria-labelledby="title1">
+            <h2 id="title1">Circle Matrix (Image → Particles)</h2>
+            <p>
+                Transform an image into a dynamic field of circles.
+                Each pixel becomes an interactive element that reacts to movement.
+                <br><br>
+                <strong>Concept:</strong> Image as a system of autonomous particles.
+            </p>
+            <span class="btn" aria-hidden="true">Open Sketch</span>
+        </a>
 
-<main class="container">
+        <a href="proyecto2/proyecto2.html" class="card" id="btn-p2" aria-labelledby="title2">
+            <h2 id="title2">The Weight of Words (Voice → Physics)</h2>
+            <p>
+                Spoken words are converted into letters that move and fall under gravity.
+                Language becomes physical and temporary.
+                <br><br>
+                <strong>Concept:</strong> Speech transformed into matter.
+            </p>
+            <span class="btn" aria-hidden="true">Open Sketch</span>
+        </a>
+    </main>
 
-    <div class="card" id="btn-p1">
-        <h2>Circle Matrix (Image → Particles)</h2>
-        <p>
-            Transform an image into a dynamic field of circles.  
-            Each pixel becomes an interactive element that reacts to movement.  
-            <br><br>
-            <strong>Concept:</strong> Image as a system of autonomous particles.
-        </p>
-        <button class="btn">Open Sketch</button>
-    </div>
-
-    <div class="card" id="btn-p2">
-        <h2>The Weight of Words (Voice → Physics)</h2>
-        <p>
-            Spoken words are converted into letters that move and fall under gravity.  
-            Language becomes physical and temporary.  
-            <br><br>
-            <strong>Concept:</strong> Speech transformed into matter.
-        </p>
-        <button class="btn">Open Sketch</button>
-    </div>
-
-</main>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
