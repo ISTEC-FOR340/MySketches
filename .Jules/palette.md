@@ -1,0 +1,3 @@
+## 2025-01-24 - Semantic Cards and Focus Visibility
+**Learning:** Converting large interactive `div` containers to semantic `<a>` tags improves accessibility and simplifies code. When cards have nested visual "buttons", converting them to `aria-hidden="true"` spans prevents nested interactive element issues for screen readers. Using `overflow: visible` with a high-contrast `:focus-visible` box-shadow ensures focus states are not clipped by glassmorphism effects or neighboring cards.
+**Action:** Always prefer semantic tags over manual JS listeners for navigation and ensure focus indicators are fully visible and non-obstructed.
