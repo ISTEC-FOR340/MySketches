@@ -79,8 +79,10 @@ header p {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     animation: fadeInUp 0.8s ease-out both;
+    text-decoration: none;
+    color: inherit;
 }
 
 .card:nth-child(2) {
@@ -98,12 +100,21 @@ header p {
     opacity: 0;
     transition: opacity 0.4s ease;
     z-index: 0;
+    border-radius: 24px;
+    pointer-events: none;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-visible {
     transform: translateY(-8px);
     border-color: rgba(56, 189, 248, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.card:focus-visible {
+    box-shadow: 0 0 0 4px var(--accent-color), 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .card > * {
@@ -147,7 +158,8 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover .btn {
+.card:hover .btn,
+.card:focus-visible .btn {
     background: var(--accent-gradient);
     border-color: transparent;
     box-shadow: 0 8px 16px rgba(56, 189, 248, 0.2);
