@@ -1,0 +1,3 @@
+## 2025-05-14 - [Semantic Navigation & Accessible Naming for Cards]
+**Learning:** Refactoring non-semantic interactive containers (e.g., `div` with `onclick`) to semantic `<a>` tags with `aria-labelledby` referencing a nested `<h2>` provides a superior user experience. It leverages native browser behaviors like right-click "Open in new tab" and provides a concise, meaningful label for screen readers without over-announcing the card's entire content.
+**Action:** Always prefer semantic anchors for navigational containers and use `aria-labelledby` to target the most descriptive element (usually a heading) within the container.
