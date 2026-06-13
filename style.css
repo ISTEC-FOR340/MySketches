@@ -26,6 +26,24 @@ body {
     line-height: 1.6;
 }
 
+/* SKIP LINK */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-color);
+    color: white;
+    padding: 8px;
+    z-index: 1000;
+    transition: top 0.3s;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 /* HEADER */
 header {
     text-align: center;
@@ -73,13 +91,14 @@ header p {
     border-radius: 24px;
     padding: 40px;
     text-align: left;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     animation: fadeInUp 0.8s ease-out both;
 }
 
@@ -100,10 +119,17 @@ header p {
     z-index: 0;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-visible {
     transform: translateY(-8px);
     border-color: rgba(56, 189, 248, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.card:focus-visible {
+    box-shadow: 0 0 0 2px var(--accent-color), 0 20px 40px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .card > * {
@@ -147,7 +173,8 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover .btn {
+.card:hover .btn,
+.card:focus-visible .btn {
     background: var(--accent-gradient);
     border-color: transparent;
     box-shadow: 0 8px 16px rgba(56, 189, 248, 0.2);
