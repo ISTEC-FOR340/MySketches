@@ -13,6 +13,24 @@
     padding: 0;
 }
 
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--accent-gradient);
+    color: white;
+    padding: 8px;
+    z-index: 1000;
+    transition: top 0.3s;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0 0 8px 0;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     background-color: var(--bg-color);
@@ -100,10 +118,16 @@ header p {
     z-index: 0;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-visible {
     transform: translateY(-8px);
     border-color: rgba(56, 189, 248, 0.4);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    outline: none;
+}
+
+.card:focus-visible {
+    box-shadow: 0 0 0 4px var(--bg-color), 0 0 0 6px var(--accent-color);
 }
 
 .card > * {
@@ -147,10 +171,15 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover .btn {
+.card:hover .btn,
+.card:focus-visible .btn {
     background: var(--accent-gradient);
     border-color: transparent;
     box-shadow: 0 8px 16px rgba(56, 189, 248, 0.2);
+}
+
+.card {
+    text-decoration: none;
 }
 
 /* ANIMATIONS */
