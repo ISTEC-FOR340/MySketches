@@ -1,0 +1,3 @@
+## 2025-05-15 - Semantic Navigation in Creative Coding Portfolios
+**Learning:** Creative coding portfolios often use custom interactive elements (like cards with p5.js links) that prioritize visual style over semantics. Replacing these with semantic <a> tags immediately enables native browser features like 'Open in new tab' and superior keyboard/screen reader navigation without compromising the "glassmorphism" aesthetic.
+**Action:** Always audit 'onclick' handlers on containers; if they lead to navigation, refactor to <a> tags and ensure :focus-visible mimics the existing :hover state (transform + high-contrast focus ring).
