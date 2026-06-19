@@ -1,0 +1,3 @@
+## 2026-06-19 - Semantic Navigation Cards
+**Learning:** Using `div` containers with `onclick` handlers for large navigation elements prevents native browser features (like middle-click to open in new tab) and breaks keyboard accessibility. When converting these to semantic `<a>` tags, any nested `<button>` elements must be converted to `<span>` to maintain valid HTML (no nested interactive elements) while preserving visual affordances.
+**Action:** Always prefer semantic `<a>` tags for navigation cards. If the card contains a "button" visual, use a `<span>` styled as a button to avoid nesting interactive elements.
