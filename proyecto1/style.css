@@ -93,6 +93,7 @@ input[type="file"] {
 
 /* BACK BUTTON */
 .back-btn {
+  text-decoration: none;
   position: fixed;
   top: 24px;
   right: 24px;
