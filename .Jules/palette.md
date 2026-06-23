@@ -1,0 +1,3 @@
+## 2024-05-15 - Semantic Navigation and Focus Management
+**Learning:** Using semantic `<a>` tags instead of `div` with `onclick` listeners automatically provides keyboard accessibility and standardizes behavior for assistive technologies. When using large clickable cards, converting nested buttons to `<span>` avoids invalid nested interactives while preserving the visual affordance.
+**Action:** Always prefer semantic HTML for navigation. For dark/glassmorphism themes, ensure `:focus-visible` is explicitly styled with high-contrast rings (like `box-shadow`) and `overflow: visible` to prevent clipping.
