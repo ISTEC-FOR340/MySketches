@@ -1,0 +1,3 @@
+## 2026-06-27 - [Semantic Navigation & Accessible Focus]
+**Learning:** In projects where cards or large containers act as links, replacing JavaScript `onclick` handlers with semantic `<a>` tags significantly improves accessibility and native browser behavior (e.g., right-click to open in new tab). To maintain visual consistency, `:focus-visible` styles should mirror `:hover` transforms and shadows, while adding a high-contrast focus ring.
+**Action:** Always prefer semantic `<a>` tags for navigation cards and ensure `:focus-visible` triggers the same visual affordances as `:hover` to maintain feedback consistency.

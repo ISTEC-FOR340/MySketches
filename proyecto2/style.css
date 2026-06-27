@@ -139,16 +139,24 @@ input[type="range"]::-webkit-slider-thumb {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   cursor: pointer;
+  text-decoration: none;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 1000;
 }
 
-.back-btn:hover {
+.back-btn:hover,
+.back-btn:focus-visible {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
   border-color: var(--accent-color);
+  text-decoration: none;
+}
+
+.back-btn:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
 }
 
 /* MOBILE */
