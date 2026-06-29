@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +15,12 @@
 <div class="ui-panel">
   <h1>Circle Matrix</h1>
   <p class="description">
-    Transform an image into a dynamic field of particles.  
+    Transform an image into a dynamic field of particles.
     The image dissolves into circles that react to your presence.
   </p>
 
   <div class="controls">
+    <label for="imageLoader">Load Image</label>
     <input type="file" id="imageLoader" accept="image/*">
 
     <label>Columns <input type="range" id="cols" min="10" max="200" value="60"></label>
@@ -29,9 +30,9 @@
   </div>
 </div>
 
-<button onclick="window.location.href='../index.html'" class="back-btn">
+<a href="../index.html" class="back-btn" aria-label="Volver al inicio">
   ⬅ Back
-</button>
+</a>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 <script src="sketch.js"></script>
