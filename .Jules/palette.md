@@ -1,0 +1,3 @@
+## 2024-05-24 - Semantic Navigation and Focus States
+**Learning:** This app used `div` elements with JavaScript `onclick` handlers for primary navigation, which breaks standard browser behavior (like "Open in new tab") and accessibility for screen readers and keyboard users.
+**Action:** Always prefer semantic `<a>` tags for navigation. When using large interactive cards, convert them to `<a>` tags, ensure nested buttons are non-interactive (like `<span>`), and explicitly define `:focus-visible` styles to match hover effects, especially in glassmorphism designs where default outlines might be clipped or visually inconsistent.
