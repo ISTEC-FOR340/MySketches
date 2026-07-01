@@ -1,0 +1,3 @@
+## 2026-07-01 - Semantic Navigation and Focus States
+**Learning:** In projects where interactivity is added to non-interactive elements (like `div` cards), refactoring to semantic `<a>` tags provides immediate accessibility wins (tabbing, screen reader recognition) and simplifies the codebase by removing manual JavaScript event listeners. Pairing this with explicit `:focus-visible` styles ensures a consistent experience for keyboard users.
+**Action:** Always prefer semantic HTML tags for navigation and interactive containers, and ensure `:focus-visible` provides clear visual feedback matching or exceeding hover states.
