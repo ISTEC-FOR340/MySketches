@@ -79,8 +79,10 @@ header p {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     animation: fadeInUp 0.8s ease-out both;
+    text-decoration: none;
+    outline: none;
 }
 
 .card:nth-child(2) {
@@ -100,10 +102,11 @@ header p {
     z-index: 0;
 }
 
-.card:hover {
+.card:hover,
+.card:focus-visible {
     transform: translateY(-8px);
     border-color: rgba(56, 189, 248, 0.4);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 2px var(--accent-color), 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card > * {
@@ -133,6 +136,8 @@ header p {
 
 /* BIG BUTTON */
 .btn {
+    display: block;
+    text-align: center;
     margin-top: auto;
     padding: 16px 24px;
     font-size: 1rem;
@@ -147,7 +152,8 @@ header p {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.card:hover .btn {
+.card:hover .btn,
+.card:focus-visible .btn {
     background: var(--accent-gradient);
     border-color: transparent;
     box-shadow: 0 8px 16px rgba(56, 189, 248, 0.2);
