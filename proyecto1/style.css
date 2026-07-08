@@ -74,6 +74,12 @@ input[type="range"] {
   -webkit-appearance: none;
 }
 
+input[type="range"]:focus-visible,
+input[type="file"]:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent-color);
+  border-radius: 4px;
+}
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 16px;
@@ -108,12 +114,19 @@ input[type="file"] {
   -webkit-backdrop-filter: blur(16px);
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   z-index: 100;
+  text-decoration: none;
+  outline: none;
 }
 
-.back-btn:hover {
+.back-btn:hover,
+.back-btn:focus-visible {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
   border-color: var(--accent-color);
+}
+
+.back-btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent-color);
 }
 
 /* MOBILE */
